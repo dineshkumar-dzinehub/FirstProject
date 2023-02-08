@@ -13,7 +13,7 @@ jobs:
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@v0.1.7
       env:
-        DEPLOYMENT_LOCATION: ${{ env.DEPLOYMENT_LOCATION }}
+        DEPLOYMENT_LOCATION: ${{ secrets.DEPLOYMENT_LOCATION }}
 
       with:
         host: ${{ secrets.SERVER_IP }}
@@ -23,7 +23,6 @@ jobs:
         envs: DEPLOYMENT_LOCATION
         script: |
           printenv
-          env
           cd $DEPLOYMENT_LOCATION
           git pull
     
