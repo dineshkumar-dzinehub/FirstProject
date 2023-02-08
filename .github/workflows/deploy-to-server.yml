@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: production
+    environment: Staging
 
     steps:
     - name: executing remote ssh commands using ssh key
