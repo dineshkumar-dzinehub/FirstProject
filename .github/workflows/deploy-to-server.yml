@@ -17,7 +17,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-          cd ${{ DEPLOYMENT_LOCATION }}
+          cd ${{ env.DEPLOYMENT_LOCATION }}
           git pull
     
 
