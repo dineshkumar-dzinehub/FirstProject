@@ -22,7 +22,8 @@ jobs:
         port: 22
         envs: DEPLOYMENT_LOCATION
         script: |
-          echo $DEPLOYMENT_LOCATION
+          printenv
+          env
           cd $DEPLOYMENT_LOCATION
           git pull
     
