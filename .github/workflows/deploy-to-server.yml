@@ -1,10 +1,8 @@
 name: Run Git pull on the server
 
 on:
- pull_request:
-   types:
-     - approved      
-   branches:
+  push:
+    branches:
      - "main"
 
 jobs:
